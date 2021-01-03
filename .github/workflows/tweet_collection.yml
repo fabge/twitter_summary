@@ -12,6 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
+        persist-credentials: false
         fetch-depth: 0
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -39,3 +40,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: master
